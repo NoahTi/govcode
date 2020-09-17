@@ -1,0 +1,264 @@
+<!-- HTML code to add icon in the title bar -->
+<html>
+
+<head>
+    <title>Crown Inc.|Delivery</title>
+    <link rel="stylesheet" type="text/css" href="Crownpage2.css">
+    <link rel="stylesheet" type="text/css" href="Crown.css">
+
+    <!-- add icon link -->
+    <link rel="icon" href="favicon.png" type="image/x-icon"> </head>
+
+    <body>
+       <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+       <a href="index.html">Home</a> <a href="delivery.html">Delivery</a>
+<table id="myTable">
+  <tr class="header">
+    <th style="width:30%;">Product</th>
+    <th style="width:35%;">Description</th>
+    <th syle="width:35%;">Price</th>
+  </tr>
+  <tr>
+    <td>Laptop</td>
+    <td>Core i4</td>
+    <td>25$</td>
+  </tr>
+  <tr>
+    <td>Laptop</td>
+    <td>Core i3</td>
+    <td>20$</td>
+  </tr>
+  <tr>
+    <td>Laptop</td>
+    <td>Core i2</td>
+    <td>15$</td>
+  </tr>
+  <tr>
+    <td>Cp 3</td>
+    <td>3 screens/Keyboard</td>
+    <td>20$</td>
+  </tr>
+  <tr>
+    <td>Cp 2</td>
+    <td>1 screeen/keyboard</td>
+    <td>15$</td>
+  </tr>
+  <tr>
+    <td>Cp 1</td>
+    <td>1 Screen</td>
+    <td>10$</td>
+  </tr>
+  <tr>
+    <td>Notebooks</td>
+    <td>4-3*2 in.</td>
+    <td>2$</td>                
+  </tr>
+  <tr>
+    <td>Envelopes</td>
+    <td>Colored</td>
+    <td>2$</td>
+  </tr>
+  <tr>
+    <td>Envelopes</td>
+    <td>Plain</td>
+    <td>1$</td>
+  </tr>
+  <tr>
+    <td>Speed Cards</td>
+    <td>null</td>
+    <td>2$</td>
+  </tr>
+  <tr>
+    <td>Stamps</td>
+    <td>Mail Delivery</td>
+    <td>1$</td>
+  </tr>
+  <tr>
+    <td>Cameras</td>
+    <td>Newest version</td>
+    <td>10$</td>                
+  </tr>
+  <tr>
+    <td>Checks</td>
+    <td>checks</td>
+    <td>5$</td>
+  </tr>
+  <tr>
+    <td>Desktops</td>
+    <td>i3</td>
+    <td>20$</td>
+  </tr>
+  <tr>
+    <td>Desktops</td>
+    <td>i4</td>
+    <td>30$</td>
+  </tr>
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+<a href="#top">Back to Top</a>
+
+</body>
+<style>
+    * {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+    background-color: yellowgreen;
+}
+
+.right {
+    right: 0;
+    background-color: yellowgreen;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.centered img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+h2 {
+    color: #FFD700;
+    font-family: Gargi, Jamrul;
+    font-size: 40px
+}
+
+.pad {
+    padding: 50px
+}
+
+.header {
+    background-color: lightblue;
+    color: black;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.box {
+    background-color: #feffcc;
+    padding: 1em;
+    border: 1px solid #cccc99;
+    border-radius: 10px;
+}
+
+.box2 {
+    background-color: gray;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.header2 {
+    background-color: lightblue;
+    color: yellow;
+    height: 75px;
+    font-size: 50px;
+    text-align: center;
+}
+/* Larger than mobile */
+
+@media (min-width: 400px) {}
+/* Larger than phablet (also point when grid becomes active) */
+
+@media (min-width: 550px) {}
+/* Larger than tablet */
+
+@media (min-width: 750px) {}
+/* Larger than desktop */
+
+@media (min-width: 1000px) {}
+/* Larger than Desktop HD */
+
+@media (min-width: 1200px) {}
+</style>
+
+<!-- /credits-inner -->
+</div>
+<!-- /credits -->
+
+<script>
+// Requiring fs module in which 
+// writeFile function is defined. 
+const fs = require('fs')
+
+// Data which will write in a file. 
+let data = "Learning how to write in a file."
+
+// Write data in 'Output.txt' . 
+fs.writeFile('Output.txt', data, (err) => {
+
+    // In case of a error throw err. 
+    if (err) throw err;
+})
+</script>
+
+</html>
