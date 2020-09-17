@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://www.w3schools.com/w3css/tryw3css_templates_black.htm -->
+<html><script data-dapp-detection="">
+(function() {
+  let alreadyInsertedMetaTag = false
+
+  function __insertDappDetected() {
+    if (!alreadyInsertedMetaTag) {
+      const meta = document.createElement('meta')
+      meta.name = 'dapp-detected'
+      document.head.appendChild(meta)
+      alreadyInsertedMetaTag = true
+    }
+  }
+
+  if (window.hasOwnProperty('web3')) {
+    // Note a closure can't be used for this var because some sites like
+    // www.wnyc.org do a second script execution via eval for some reason.
+    window.__disableDappDetectionInsertion = true
+    // Likely oldWeb3 is undefined and it has a property only because
+    // we defined it. Some sites like wnyc.org are evaling all scripts
+    // that exist again, so this is protection against multiple calls.
+    if (window.web3 === undefined) {
+      return
+    }
+    __insertDappDetected()
+  } else {
+    var oldWeb3 = window.web3
+    Object.defineProperty(window, 'web3', {
+      configurable: true,
+      set: function (val) {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        oldWeb3 = val
+      },
+      get: function () {
+        if (!window.__disableDappDetectionInsertion)
+          __insertDappDetected()
+        return oldWeb3
+      }
+    })
+  }
+})()</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Crown Inc. | Home</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="w3-theme-black.css">
+</head><body>
+
+<!-- Side Navigation -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="mySidebar">
+  <h3 class="w3-xxxlarge w3-text-theme">Navigation</h3>
+  <button class="w3-bar-item w3-button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
+  <a href="Crownjobs.html" class="w3-bar-item w3-button">Jobs</a>
+  <a href="#delivery" class="w3-bar-item w3-button">Delivery</a>
+  <a href="#emp" class="w3-bar-item w3-button">Employees</a>
+  <a href="#products" class="w3-bar-item w3-button">Products</a>
+</nav>
+
+<!-- Header -->
+<header class="w3-container w3-theme w3-padding" id="myHeader">
+  <i onclick="w3_open()" class="w3-xlarge w3-button w3-theme">☰</i> 
+  <div class="w3-center">
+  <h4>One of the biggest companys in Childville</h4>
+  <h1 class="w3-xxxlarge w3-animate-bottom">Crown Inc.</h1>
+    <div class="w3-padding-32">
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;block&#39;" style="font-weight:900;">Contact Us</button>
+    </div>
+  </div>
+</header>
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <span onclick="document.getElementById(&#39;id01&#39;).style.display=&#39;none&#39;" class="w3-button w3-display-topright">×</span>
+      </header>
+      <div class="w3-padding">
+        <style>.fs_embed{height:1063px;width:640px;border:none}@media(max-width:640px){.fs_embed{width:100%}}</style><iframe class="fs_embed" src="https://formsmarts.com/form/24w9?mode=h5embed&lay=2" allow="camera; fullscreen; geolocation" allowfullscreen="true"><a href="https://formsmarts.com/form/24w9">Can&#39;t see the form? Click here</a>.</iframe><div style="margin:3px 3px 10px 3px;width:540px"><a target="_blank" href="https://formsmarts.com/form-builder-features" title="Form Creator">Form Creator</a> by <a target="_blank" href="https://formsmarts.com/electronic-signature" title="Electronic Signature"><img width="104" height="22" alt="Electronic Signature" style="border:0;vertical-align:middle" src="//static.formsmarts.com/img/form_builder.png?electronic-signature"></a>&nbsp;-&nbsp;<a target="syronex_help" rel="nofollow" href="https://formsmarts.com/privacy" title="FormSmarts Privacy Policy">Privacy</a></div><!-- Do not change or remove this notice. See https://formsmarts.com/warn -->
+      </div>
+      <footer class="w3-container w3-theme-l1">
+        <p>Crown Inc. Copyright 2019-2020</p>
+      </footer>
+    </div>
+</div>
+
+<div class="w3-row-padding w3-center w3-margin-top">
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:200px">
+  <h3>Retail</h3><br>
+  <p>Laptops</p>
+  <p>Notebooks</p>
+  <p>Speed Cards & more.</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:200px">
+  <h3>Web Services</h3><br>
+  <p>Web Design</p>
+  <p>Site Launch</p>
+  <p>Marketing</p>
+  </div>
+</div>
+
+<div class="w3-third">
+  <div class="w3-card w3-container" style="min-height:200px">
+  <h3>Other Services</h3><br>
+  <p>Job Finder</p>
+  <p>Messaging</p>
+  <p>Package Delivery</p>
+  </div>
+</div>
+</div>
+
+<div class="w3-container">
+<hr>
+
+
+
+
+
+
+
+
+
+<header class="w3-container w3-blue-grey">
+  <h2>Crown Web Services</h2>
+</header>
+
+<div class="w3-padding w3-white w3-display-container">
+  <span onclick="this.parentElement.style.display=&#39;none&#39;" class="w3-button w3-display-topright">x<i class="fa fa-remove"></i></span>
+<p>Launch a website with CWS</p>
+<table>
+  <tr>
+    <th>@</th>
+    <th>Normal</th>
+    <th>Pro</th>
+  </tr>
+  <tr>
+    <th>Employee Area</th>
+    <td>x</td>
+    <td>✓</td>
+  </tr>
+  <tr>
+    <th>UI Designer</th>
+    <td>x</td>
+    <td>✓</td>
+  </tr>
+  <tr>
+    <th>Support</th>
+    <td>✓</td>
+    <td>✓</td>
+  </tr>
+  <tr>
+    <th>Messaging</th>
+    <td>x</td>
+    <td>✓</td>
+  </tr>
+  <tr>
+    <th>Space</th>
+    <td>25KB</td>
+    <td>50KB</td>
+  </tr>
+  <tr>
+    <th>Images</th>
+    <td>100KB of space</td>
+    <td>300KB of space</td>
+  </tr>
+  <tr>
+    <th>CrownAds</th>
+    <td>x</td>
+    <td>✓</td>
+  </tr>
+  <tr>
+    <th>Templates</th>
+    <td>✓</td>
+    <td>✓</td>
+  </tr>
+  <tr>
+    <th>Crown Direct</th>
+    <td>x</td>
+    <td>✓</td>
+  </tr>
+  <tr>
+    <th>Price</th>
+    <th>5$ a mo.</th>
+    <th>10$ a mo.</th>
+  </tr>
+</table>
+</div>
+
+<footer class="w3-container w3-blue-grey">
+  <h5>Crown Inc.</h5>
+</footer>
+<hr>
+<div class="w3-center">
+  <a name="delivery"></a>
+  <h2>Crown Direct</h2>
+</div>
+</div>
+
+<div class="w3-row-padding">
+
+<div class="w3-half">
+<div class="w3-card white">
+  <div class="w3-container w3-indigo">
+    <h3>Normal</h3>
+  </div>
+  <div class="w3-container">
+    <h3 class="w3-text-theme">Refund</h3>
+    </div>
+    <ul class="w3-ul w3-border-top">
+      <li>
+        <h3>Time</h3>
+        <p>1 month.</p>
+      </li>
+      <li>
+        <h3>Charge</h3>
+        <p>4$</p>
+      </li>
+    </ul>
+</div>
+
+</div>
+
+<div class="w3-half">
+<div class="w3-card white">
+  <div class="w3-container w3-theme">
+    <h3>Premium</h3>
+  </div>
+  <div class="w3-container">
+  <h3 class="w3-text-theme">Refund</h3>
+  </div>
+  <ul class="w3-ul w3-border-top">
+    <li>
+      <h3>Time</h3>
+      <p>Max Time 2 weeks.</p>
+    </li>
+    <li>
+      <h3>Charge</h3>
+      <p>6$</p>
+    </li>
+  </ul>
+</div>
+</div>
+</div>
+<h6>Prices vary due to size.</h6>
+<div class="w3-container">
+  <hr>
+  <a name="emp"></a>
+  <div class="w3-center">
+    <h2>Employees</h2>
+  </div>
+<div class="w3-responsive w3-card-4">
+<table class="w3-table w3-striped w3-bordered">
+<thead>
+<tr class="w3-theme">
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Town</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Noah</td>
+  <td>Tillinghast</td>
+  <td>Tillinghastville</td>
+</tr>
+<tr class="w3-white">
+  <td>Jacob</td>
+  <td>Weaver</td>
+  <td>Weaverville</td>
+</tr>
+<tr>
+  <td>Elijah</td>
+  <td>Brackett</td>
+  <td>Little Medford</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+<div class="w3-half">
+<div class="w3-card-4 w3-container">
+<h2>Lists</h2>
+<ul class="w3-ul w3-margin-bottom">
+  <li>Jill</li>
+  <li>Eve</li>
+  <li>Adam</li>
+</ul>
+<br>
+<ul class="w3-ul w3-border w3-hoverable">
+  <li class="w3-theme">Jill</li>
+  <li>Eve</li>
+  <li>Adam</li>
+  <li>Steve</li>
+</ul>
+<br>
+</div>
+</div>
+</div>
+<hr>
+
+
+<!--
+<h2 class="w3-center">Slideshows</h2>
+<div class="w3-content" style="max-width:800px;position:relative">
+
+<img class="mySlides w3-animate-opacity" src="./accordion_files/snow.jpg" style="width: 100%; display: block;">
+<img class="mySlides w3-animate-opacity" src="./accordion_files/lights.jpg" style="width: 100%; display: none;">
+<img class="mySlides w3-animate-opacity" src="./accordion_files/mountains.jpg" style="width: 100%; display: none;">
+<img class="mySlides w3-animate-opacity" src="./accordion_files/forest.jpg" style="width: 100%; display: none;">
+
+<a class="w3-button w3-hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)">❮</a>
+<a class="w3-button w3-hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs(+1)">❯</a>
+</div>
+<hr>
+-->
+
+</div>
+<a name="products"></a>
+<hr>
+<h2 class="w3-center">Products</h2>
+<div class="w3-border">
+<div class="w3-bar w3-theme">
+  <button class="w3-bar-item w3-button testbtn w3-padding-16 w3-dark-grey" onclick="openCity(event,&#39;Laptops&#39;)">Laptops</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,&#39;Cameras&#39;)">Cameras</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,&#39;SpeedCards&#39;)">Speed Cards</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16 w3-dark-grey" onclick="openCity(event,&#39;Envelopes&#39;)">Envelopes</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,&#39;Notebooks&#39;)">Notebooks</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,&#39;Desktops&#39;)">Desktops</button>
+  <button class="w3-bar-item w3-button testbtn w3-padding-16" onclick="openCity(event,&#39;Phones&#39;)">Phones</button>
+</div>
+</div>
+</div>
+
+<div id="Laptops" class="w3-container city w3-animate-opacity" style="display: block;">
+  <h2>Laptops</h2>
+  <p>The oldest computer design in ChildvilleCameras.</p>
+  <p>From the CrownBook with Core i1 to the Core i4 Crown laptops can be purchased between 15-20$. </p>
+</div>
+
+<div id="Cameras" class="w3-container city w3-animate-opacity" style="display: none;">
+  <h2>Cameras</h2>
+  <p>New release. For about 6 months we have been refining our camera technology. Buy the result for 10$.</p>
+</div>
+
+<div id="SpeedCards" class="w3-container city w3-animate-opacity" style="display: none;">
+  <h2>Speed Cards</h2>
+  <p>Speed Cards are now available for sale with quick delivery into Little Medford.</p>
+</div>
+</div>
+<div id="Envelopes" class="w3-container city w3-animate-opacity" style="display: none;">
+  <h2>Envelopes</h2>
+  <p>Since orders from Tillinghastville have been filled Little Medford has a full stock of envelopes for 1$. Buy while supplies last.</p>
+</div>
+</div>
+<div id="Notebooks" class="w3-container city w3-animate-opacity" style="display: none;">
+  <h2>Envelopes</h2>
+  <p>Buy notebooks, now available in Little Medford from Elijah Brackett.</p>
+</div>
+</div>
+<div id="Phones" class="w3-container city w3-animate-opacity" style="display: none;">
+  <h2>Phones</h2>
+  <p>Buy notebooks, now available in Little Medford from Elijah Brackett.</p>
+</div>
+</div>
+<div id="Desktops" class="w3-container city w3-animate-opacity" style="display: none;">
+  <h2>Desktops</h2>
+  <p>Order the desktops for 20-25$. Since recent orders we have been a bit behind so products might take some time to produce.</p>
+</div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-light w3-padding-16">
+  <h3>Crown Inc. &#169; 2019-2020</h3>
+    <div style="position:relative;bottom:55px;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-theme-light w3-padding">Go To Top</span>&nbsp;   
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
+<script>
+// Side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "20%";
+  x.style.fontSize = "12px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+    activebtn[i].className = activebtn[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-dark-grey";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+  slideIndex = slideIndex + n;
+  showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+showDivs(1);
+
+// Progress Bars
+function move() {
+  var elem = document.getElementById("myBar");   
+  var width = 5;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width == 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+      elem.innerHTML = width * 1  + '%';
+    }
+  }
+}
+</script>
+
+
+</body></html>
